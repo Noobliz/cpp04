@@ -60,9 +60,9 @@ WrongCat::~WrongCat(){
     <<" destructor called"<<std::endl;
 }
 
-// void WrongCat::makeSound() const{
-//     WrongAnimal::makeSound();
-// }
+void WrongCat::makeSound() const{
+    std::cout<<"Wrong Meow"<<std::endl;
+}
 
 
 int main()
