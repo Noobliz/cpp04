@@ -64,23 +64,3 @@ void WrongCat::makeSound() const{
     std::cout<<"Wrong Meow"<<std::endl;
 }
 
-
-int main()
-{
-    const WrongAnimal* meta = new WrongAnimal();
-    const WrongAnimal* i = new WrongCat();
-    const WrongAnimal* tmp;
-    //tmp = i;
-    //i = j;
-    //std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    //j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete i;
-    //delete j;
-    //delete tmp;
-
-    return 0;
-}
