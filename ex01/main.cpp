@@ -19,16 +19,16 @@ int main(void)
 	for (int i = nbAnimals / 2; i < nbAnimals; ++i)
 		animals[i] = new Cat();
 
-    std::cout << "\n--- [ tests dogs ] ---\n" << std::endl;
+    std::cout << "\n--- [ tests Dogs by copy ] ---\n" << std::endl;
     Dog basicDog;
-    basicDog.setIdea("I want to eat a bone", 0);
+    basicDog.setIdea("I want to eat my poop", 0);
 
     Dog copyDog (basicDog);
 
     std::cout << "Original idea of basicDog: " << basicDog.getIdea(0) << std::endl;
     std::cout << "Copied idea in copyDog: " << copyDog.getIdea(0) << std::endl;
 
-    copyDog.setIdea("I want to chase my tail", 0);
+    copyDog.setIdea("I want to dig a hole", 0);
     std::cout << "After modification, basicDog idea: " << basicDog.getIdea(0) << std::endl;
     std::cout << "After modification, copyDog idea: " << copyDog.getIdea(0) << std::endl;
 
