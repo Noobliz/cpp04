@@ -1,7 +1,7 @@
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex03
+NAME = ex00
 
 SRC =   main.cpp \
         Animal.cpp \
