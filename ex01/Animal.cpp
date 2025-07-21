@@ -21,7 +21,7 @@ Animal &Animal::operator=(const Animal &other){
 
 Animal::~Animal()
 {
-    std::cout<<"destructor called"<<std::endl;
+    std::cout<<"Animal destructor called"<<std::endl;
 }
 std::string Animal::getType() const{
     return (type);

@@ -2,7 +2,7 @@
 #include "Brain.hpp"
 
 Brain::Brain(){
-    //std::cout << "Brain default constructor called" << std::endl;
+    std::cout << "Brain default constructor called" << std::endl;
     for (int i = 0; i < 100; ++i)
         ideas[i] = "idea not set";
 }
@@ -27,7 +27,7 @@ Brain& Brain::operator=(const Brain& other)
 }
 
 Brain::~Brain(){
-
+    std::cout<<"brain destructor called"<<std::endl;
 }
 
 

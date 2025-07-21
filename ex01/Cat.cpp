@@ -10,6 +10,7 @@ Cat::Cat(){
 
 Cat::Cat(const Cat &other){
     this->type = other.type;
+    this->brain = new Brain(*other.brain);
     std::cout<<this->type<<" copy type called"<<std::endl;
 }
 
