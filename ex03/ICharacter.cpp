@@ -22,13 +22,14 @@ void Character::unequip(int idx){
         return ;
     }
     AMateria *tmp;
-    AMateria *newIventory[4];
-    for(int i = 0; i <= _NbMateria; i++)
-    {
-        if (idx != i)
-        {
-            newIventory[i] = _Inventory[i];
-        }
-    }
+    //AMateria *newIventory;
     tmp = _Inventory[idx];
+    _Inventory[idx] = 0;
+    int i = 0;
+    while(i < _NbMateria)
+    {
+        _Inventory[idx + i] = _Inventory[i + 1];
+        i--;
+    }
+    _NbMateria--;
 }
