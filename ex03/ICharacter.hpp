@@ -5,7 +5,7 @@
 class ICharacter
 {
     public:
-        virtual ~ICharacter() {}
+        //virtual ~ICharacter() {}
         virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
         virtual void unequip(int idx) = 0;
@@ -18,7 +18,7 @@ class Character: public ICharacter{
         AMateria *_Inventory[4];
         int _NbMateria;
     public:
-        Character();
+        //Character();
         Character(std::string const name);
         Character(const Character &other);
         Character &operator=(const Character &other);

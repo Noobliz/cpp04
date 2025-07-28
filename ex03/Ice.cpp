@@ -1,15 +1,15 @@
 #include "Ice.hpp"
 
-Ice::Ice(){
-    this->type = "ice";
-}
+// Ice::Ice(){
+//     this->type = "ice";
+// }
 
-Ice::Ice(std::string const &type)
+Ice::Ice(std::string const &type): AMateria(type)
 {
     this->type = "ice";
 }
 
-Ice::Ice(const Ice &other)
+Ice::Ice(const Ice &other): AMateria(other)
 {
     this->type = "ice";
 }
