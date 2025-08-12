@@ -17,7 +17,7 @@ int main(void)
     for (int i = 0; i < nbAnimals / 2; i++)
         animals[i]->makeSound();
 
-	std::cout << "\n--- [ Constructors Cats] ---\n" << std::endl;
+    std::cout << "\n--- [ Constructors Cats] ---\n" << std::endl;
 
 	for (int i = nbAnimals / 2; i < nbAnimals; ++i)
 		animals[i] = new Cat();
@@ -51,6 +51,7 @@ int main(void)
         //std::cout<<"trueCat idea: "<<trueCat.getIdea(0)<<std::endl;
         std::cout<<"after assignation, otherCat idea : "<<otherCat.getIdea(0)<<std::endl;
     }
+    std::cout<<"\n---- [destructors] ---\n"<<std::endl;
     for (int i = 0; i < nbAnimals; i++)
         delete animals[i];
 

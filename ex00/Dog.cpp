@@ -6,7 +6,7 @@ Dog::Dog(){
 
 }
 
-Dog::Dog(const Dog &other){
+Dog::Dog(const Dog &other): Animal(other){
     this->type = other.type;
     std::cout<<this->type<<" copy type called"<<std::endl;
 }

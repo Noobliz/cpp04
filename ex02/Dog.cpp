@@ -1,25 +1,25 @@
 #include "Dog.hpp"
 
 Dog::Dog(){
+    std::cout<<"Dog default constructor called"<<std::endl;
     this->type = "Dog";
     this->brain = new(std::nothrow) Brain();
-    std::cout<<"Dog default constructor called"<<std::endl;
 
 }
 
-Dog::Dog(const Dog &other){
+Dog::Dog(const Dog &other): AAnimal(other){
+    std::cout<<this->type<<" copy type called"<<std::endl;
     this->type = other.type;
     this->brain = new(std::nothrow) Brain(*other.brain);
-    std::cout<<this->type<<" copy type called"<<std::endl;
 }
 
 Dog &Dog::operator=(const Dog &other){
     if (this != &other)
     {
+        std::cout<<this->type<<" assignement type called"<<std::endl;
         this->type = other.type;
         delete this->brain;
         this->brain = new(std::nothrow) Brain(*other.brain);
-        std::cout<<this->type<<" assignement type called"<<std::endl;
     }
     return *this;
 }

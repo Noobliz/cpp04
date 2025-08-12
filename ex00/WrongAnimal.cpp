@@ -22,7 +22,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other){
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout<<"destructor called"<<std::endl;
+    std::cout<<type<<" destructor called"<<std::endl;
 }
 
 std::string WrongAnimal::getType() const{
@@ -41,7 +41,7 @@ WrongCat::WrongCat(){
 
 }
 
-WrongCat::WrongCat(const WrongCat &other){
+WrongCat::WrongCat(const WrongCat &other): WrongAnimal(other){
     this->type = other.type;
     std::cout<<this->type<<" copy type called"<<std::endl;
 }

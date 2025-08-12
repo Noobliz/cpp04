@@ -7,7 +7,7 @@ Cat::Cat(){
 
 }
 
-Cat::Cat(const Cat &other){
+Cat::Cat(const Cat &other): Animal(other){
     this->type = other.type;
     std::cout<<this->type<<" copy type called"<<std::endl;
 }

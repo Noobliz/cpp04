@@ -7,30 +7,32 @@
 
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    //const Animal* tmp;
-    //tmp = i;
-    //i = j;
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete i;
-    delete j;
-    //delete tmp;
-    //-----------------------wrongAnimal
-    std::cout<<"------WRONG ANIMAL TESTS-------"<<std::endl;
-    const WrongAnimal* meta2 = new WrongAnimal();
-    const WrongAnimal* x = new WrongCat();
+    const Animal* animal = new Animal();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
+    std::cout<<std::endl;
 
-    std::cout << x->getType() << " " << std::endl;
-    x->makeSound();
-    meta2->makeSound();
-    delete meta2;
-    delete x;
+    std::cout << dog->getType() << " : ";
+    dog->makeSound();
+    std::cout << cat->getType() << " : ";
+    cat->makeSound();
+    animal->makeSound();
+
+    //-----------------------wrongAnimal
+    std::cout<<"\n------WRONG ANIMAL TESTS-------\n"<<std::endl;
+    const WrongAnimal* wrongCreature = new WrongAnimal();
+    const WrongAnimal* wrongCat = new WrongCat();
+    std::cout<<std::endl;
+
+    std::cout << wrongCat->getType() << " : ";
+    wrongCat->makeSound();
+    wrongCreature->makeSound();
+
+    std::cout<<"\n------destructors-------\n"<<std::endl;
+    delete animal;
+    delete cat;
+    delete dog;
+    delete wrongCreature;
+    delete wrongCat;
     return 0;
 }
