@@ -1,5 +1,5 @@
 
-#include "Brain.hpp"
+#include "../header/Brain.hpp"
 
 Brain::Brain(){
     std::cout << "Brain default constructor called" << std::endl;

@@ -1,9 +1,9 @@
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-
+#include "../header/Animal.hpp"
+#include "../header/Dog.hpp"
+#include "../header/Cat.hpp"
+#include "../header/WrongAnimal.hpp"
+#include "../header/WrongCat.hpp"
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
     cat->makeSound();
     animal->makeSound();
 
-    //-----------------------wrongAnimal
+
     std::cout<<"\n------WRONG ANIMAL TESTS-------\n"<<std::endl;
     const WrongAnimal* wrongCreature = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();

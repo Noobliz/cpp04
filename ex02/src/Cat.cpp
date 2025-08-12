@@ -1,5 +1,5 @@
 
-#include "Cat.hpp"
+#include "../header/Cat.hpp"
 
 Cat::Cat(){
     std::cout<<"Cat default constructor called"<<std::endl;
@@ -8,7 +8,7 @@ Cat::Cat(){
 
 }
 
-Cat::Cat(const Cat &other): Animal(other){
+Cat::Cat(const Cat &other): AAnimal(other){
     std::cout<<this->type<<" copy type called"<<std::endl;
     this->type = other.type;
     this->brain = new(std::nothrow) Brain(*other.brain);

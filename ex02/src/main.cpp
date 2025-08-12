@@ -1,26 +1,27 @@
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "Brain.hpp"
+#include "../header/AAnimal.hpp"
+#include "../header/Dog.hpp"
+#include "../header/Cat.hpp"
+#include "../header/Brain.hpp"
 
 int main(void)
 {
-    int nbAnimals = 6;
-    Animal *animals[nbAnimals];
+    int nbAAnimals = 6;
+    AAnimal *AAnimals[nbAAnimals];
+    //AAnimal a; ->proves that the class is abstract (do not compile)
 
 
 	std::cout << "\n--- [ Constructors Dogs] ---\n" << std::endl;
 
-	for (int i = 0; i < nbAnimals / 2; ++i)
-		animals[i] = new Dog();
+	for (int i = 0; i < nbAAnimals / 2; ++i)
+		AAnimals[i] = new Dog();
 
-    for (int i = 0; i < nbAnimals / 2; i++)
-        animals[i]->makeSound();
+    for (int i = 0; i < nbAAnimals / 2; i++)
+        AAnimals[i]->makeSound();
 
-    std::cout << "\n--- [ Constructors Cats] ---\n" << std::endl;
+    std::cout<<"\n--- [ Constructors Cats] ---\n"<< std::endl;
 
-	for (int i = nbAnimals / 2; i < nbAnimals; ++i)
-		animals[i] = new Cat();
+	for (int i = nbAAnimals / 2; i < nbAAnimals; ++i)
+		AAnimals[i] = new Cat();
 
     std::cout << "\n--- [ tests Dogs by copy ] ---\n" << std::endl;
     {
@@ -52,8 +53,8 @@ int main(void)
         std::cout<<"after assignation, otherCat idea : "<<otherCat.getIdea(0)<<std::endl;
     }
     std::cout<<"\n---- [destructors] ---\n"<<std::endl;
-    for (int i = 0; i < nbAnimals; i++)
-        delete animals[i];
+    for (int i = 0; i < nbAAnimals; i++)
+        delete AAnimals[i];
 
     return (0);
 }

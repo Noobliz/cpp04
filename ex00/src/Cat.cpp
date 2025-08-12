@@ -1,17 +1,18 @@
-#include "Dog.hpp"
 
-Dog::Dog(){
-    this->type = "Dog";
-    std::cout<<"Dog default constructor called"<<std::endl;
+#include "../header/Cat.hpp"
+
+Cat::Cat(){
+    this->type = "Cat";
+    std::cout<<"Cat default constructor called"<<std::endl;
 
 }
 
-Dog::Dog(const Dog &other): Animal(other){
+Cat::Cat(const Cat &other): Animal(other){
     this->type = other.type;
     std::cout<<this->type<<" copy type called"<<std::endl;
 }
 
-Dog &Dog::operator=(const Dog &other){
+Cat &Cat::operator=(const Cat &other){
     if (this != &other)
     {
         this->type = other.type;
@@ -20,11 +21,11 @@ Dog &Dog::operator=(const Dog &other){
     return *this;
 }
 
-void Dog::makeSound() const{
-    std::cout<<"WAF"<<std::endl;
-}
-
-Dog::~Dog(){
+Cat::~Cat(){
     std::cout<<this->type
     <<" destructor called"<<std::endl;
+}
+
+void Cat::makeSound() const{
+    std::cout<<"MEOW"<<std::endl;
 }

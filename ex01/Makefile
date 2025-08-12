@@ -3,11 +3,11 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = ex01
 
-SRC =   main.cpp \
-        Animal.cpp \
-		Cat.cpp \
-		Dog.cpp \
-		Brain.cpp
+SRC =   src/main.cpp \
+        src/Animal.cpp \
+		src/Cat.cpp \
+		src/Dog.cpp \
+		src/Brain.cpp
 
 OBJDIR = .obj/
 OBJ = $(addprefix $(OBJDIR),$(SRC:.cpp=.o))

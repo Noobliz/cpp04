@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "../header/Animal.hpp"
 
 Animal::Animal():type("living creature"){
     std::cout<<"Animal default constructor called"<<std::endl;
