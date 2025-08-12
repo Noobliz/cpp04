@@ -51,11 +51,12 @@ void MateriaSource::learnMateria(AMateria *m)
     if (!m)
         return ;
     int i = 0;
-    while (_inventory[i] != NULL)
+    while (i < 4 && _inventory[i] != NULL)
         i++;
     if (i >= 4)
     {
         std::cout<<"MateriaSource inventory is full"<<std::endl;
+        delete m;
         return ;
     }
     _inventory[i] = m;
@@ -70,12 +71,12 @@ AMateria* MateriaSource::createMateria(std::string const &type)
         std::cout<<"type is empty"<<std::endl;
         return NULL;
     }
-    while (_inventory[i] != NULL)
+    while (i < 4 && _inventory[i] != NULL)
     {
         if(_inventory[i]->getType() == type)
             return (_inventory[i]->clone());
         i++;
     }
-    std::cout<<"materia "<<type<<" not found"<<std::endl;
+    std::cout<<"Materia "<<type<<" not found"<<std::endl;
     return (NULL);
 }

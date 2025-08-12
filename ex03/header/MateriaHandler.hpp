@@ -8,11 +8,10 @@ private:
     int _count;
     
     MateriaHandler(); 
-    public:
     // avoid copy (otherwise is not a singleton)
-    MateriaHandler(const MateriaHandler &other) = delete;
-    MateriaHandler& operator=(const MateriaHandler &other) = delete;
-    
+    MateriaHandler(const MateriaHandler &other);
+    MateriaHandler& operator=(const MateriaHandler &other);
+public:
 // Method to obtain the unique instance
     static MateriaHandler& getInstance();
     
@@ -21,6 +20,4 @@ private:
     void cleanup();
     
     ~MateriaHandler();
-    
-    void    printMateria();
 };

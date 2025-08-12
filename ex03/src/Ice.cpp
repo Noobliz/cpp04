@@ -6,20 +6,22 @@ Ice::Ice(){
 
 Ice::Ice(std::string const &type)
 {
+    (void)type;
     this->type = "ice";
 }
 
-Ice::Ice(const Ice &other)
+Ice::Ice(const Ice &other):AMateria(other)
 {
+    (void)other;
     this->type = "ice";
 }
 Ice &Ice::operator=(const Ice &other){
-
+    (void)other;
     return (*this);
 }
 
 Ice::~Ice(){
-    std::cout<<"destructor ice called"<<std::endl;
+    //std::cout<<"destructor ice called"<<std::endl;
 }
 
 Ice* Ice::clone() const

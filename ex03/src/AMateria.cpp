@@ -1,12 +1,14 @@
 #include "../header/AMateria.hpp"
 AMateria::AMateria()
 {
+    type = "default";
     //std::cout<<"default constructor for abstract materia"<<std::endl;
 }
 
 AMateria::AMateria(std::string const &type)
 {
-    this->type = type;
+    (void)type;
+    this->type = "default";
 }
 AMateria::AMateria(const AMateria& other)
 {
@@ -31,5 +33,5 @@ std::string const& AMateria::getType()const{
 
 void AMateria::use(ICharacter& target)
 {
-    
+    (void)target;
 }

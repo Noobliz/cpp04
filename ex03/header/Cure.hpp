@@ -3,7 +3,8 @@
 #include "AMateria.hpp"
 
 class Cure : public AMateria{
-
+    private:
+    
     public:
         Cure();
         Cure(std::string const &type);
