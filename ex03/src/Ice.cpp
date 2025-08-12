@@ -1,23 +1,20 @@
-#include "Ice.hpp"
+#include "../header/Ice.hpp"
 
-// Ice::Ice(){
-//     this->type = "ice";
-// }
+Ice::Ice(){
+    this->type = "ice";
+}
 
-Ice::Ice(std::string const &type): AMateria(type)
+Ice::Ice(std::string const &type)
 {
     this->type = "ice";
 }
 
-Ice::Ice(const Ice &other): AMateria(other)
+Ice::Ice(const Ice &other)
 {
     this->type = "ice";
 }
 Ice &Ice::operator=(const Ice &other){
-    // if (this != &other)
-    // {
-    //     this->type = other.type;
-    // }
+
     return (*this);
 }
 
@@ -29,4 +26,9 @@ Ice* Ice::clone() const
 {
     Ice *cloned = new Ice(*this);
     return cloned;
+}
+
+void Ice::use(ICharacter &target)
+{
+    std::cout<<"* shoots an ice bolt at "<<target.getName()<<" *"<<std::endl;
 }

@@ -1,7 +1,7 @@
-#include "AMateria.hpp"
-
-AMateria::AMateria(){
-    type = "default";
+#include "../header/AMateria.hpp"
+AMateria::AMateria()
+{
+    //std::cout<<"default constructor for abstract materia"<<std::endl;
 }
 
 AMateria::AMateria(std::string const &type)
@@ -22,13 +22,14 @@ AMateria &AMateria::operator=(const AMateria &other){
 }
 
 AMateria::~AMateria(){
-    std::cout<<"destructor AMateria called"<<std::endl;
+    //std::cout<<"destructor AMateria called"<<std::endl;
 }
 
 std::string const& AMateria::getType()const{
     return (this->type);
 }
 
-AMateria* AMateria::clone()const{
-
+void AMateria::use(ICharacter& target)
+{
+    
 }
